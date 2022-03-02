@@ -6,8 +6,9 @@
     </head>
 
     <body>
+        
         <div class="header">
-            <img src="C:\Users\ANUBH\Documents\VSCode\html\website\images\logo.jpg">
+            <img src="..\images\logo.jpg">
             <h1>Manomay Hearing Aid Center</h1>
             <p>A unit of New Sree Industries</p>
         </div>
@@ -107,14 +108,14 @@
             <p><b>Phone:</b> 080 4992 3851, +91 99807 74678</p>
         </div>
         
-        <div class="secondary">?
+        <div class="secondary">
             <div class="item">
                 <h3>Find us on Google Maps</h3>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5285094112155!2d77.5659120147559!3d13.001980490835923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae178763df6613%3A0x58c0261a1357a8c0!2sManomay%20Hearing%20Aid%20Center!5e0!3m2!1sen!2sin!4v1646235453597!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="item">
                 <h3>Scan this QR code for directions on your mobile device</h3>
-                <img src="C:\Users\ANUBH\Documents\VSCode\html\website\images\qr_code.png">
+                <img src="..\images\qr_code.png">
             </div>
         </div>
 
@@ -124,5 +125,28 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2" 
         async
         ></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCqDV4tmv9Ma08Ga9WFflMqF2ccS8efePc",
+              authDomain: "manomay-74eb0.firebaseapp.com",
+              projectId: "manomay-74eb0",
+              storageBucket: "manomay-74eb0.appspot.com",
+              messagingSenderId: "523447708765",
+              appId: "1:523447708765:web:9cf02cddc71ffc1b32b1b4",
+              measurementId: "G-DTYBH18M1G"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
     </body>
 </html>
