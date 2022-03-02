@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: "Ubuntu", serif;
+}
+
+#navbar {
+    z-index: 1;
+    overflow: hidden;
+    background-color: #333;
+}
+#navbar a {
+    background-color: inherit;
+    color: #f2f2f2;
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 20px;
+}
+#navbar a:hover {
+    background-color: rgb(180, 180, 180);
+    color: black;
+}
+#navbar a.active {
+    background-color: #18742c;
+    color: white;
+}
+
+#map {
+    padding-top: 75%;
+}
+
+.header {
+    background-color: white;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+.header img {
+    float: left;
+    padding: 10px;
+    width: 7.5%;
+    height: 7.5%;
+}
+.header h1{
+    padding: 10px;
+}
+
+.primary {
+    float: left;
+    width: 75%;
+    height: 100%;
+}
+
+
+
+.secondary {
+    float: right;
+    width: 25%;
+    height: 100%;
+}
+
+.item {
+    padding: 30px 50px;
+    box-sizing: border-box;
+    border: 5px solid white;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+}
+.item img {
+    max-width: 100%;
+}
+.item iframe{
+    max-width: 100%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .item {
+    padding-top: 80px;
+}
