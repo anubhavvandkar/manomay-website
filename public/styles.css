@@ -29,14 +29,11 @@ body {
     color: white;
 }
 
-#map {
-    padding-top: 75%;
-}
-
 .header {
     background-color: white;
     font-size: 20px;
     overflow-x: hidden;
+    height: 8%;
 }
 .header img {
     float: left;
@@ -53,8 +50,6 @@ body {
     width: 75%;
     height: 100%;
 }
-
-
 
 .secondary {
     float: right;
@@ -81,6 +76,9 @@ body {
     top: 0;
     width: 100%;
 }
-.sticky + .item {
+.sticky + .primary {
+    padding-top: 80px;
+}
+.sticky + .secondary {
     padding-top: 80px;
 }
