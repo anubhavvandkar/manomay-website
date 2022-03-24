@@ -1,24 +1,36 @@
 body {
     margin: 0;
-    font-size: 18px;
-    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
     font-family: "Ubuntu", serif;
 }
+
+.fa.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
 
 #navbar {
     z-index: 1;
     overflow: hidden;
     background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 #navbar a {
     background-color: inherit;
     color: #f2f2f2;
     float: left;
     display: block;
-    text-align: center;
     text-decoration: none;
     padding: 15px;
     font-size: 20px;
+    transition: 0.3s;
 }
 #navbar a:hover {
     background-color: rgb(180, 180, 180);
@@ -28,57 +40,100 @@ body {
     background-color: #18742c;
     color: white;
 }
-
 .header {
+    display: table;
+    text-align: left;
     background-color: white;
-    font-size: 20px;
+    font-size: 26px;
     overflow-x: hidden;
     height: 8%;
 }
 .header img {
-    float: left;
+    display: table-cell;
     padding: 10px;
-    width: 7.5%;
-    height: 7.5%;
+    width: 10%;
+    height: 10%;
 }
-.header h1{
-    padding: 10px;
+
+.header_item {
+    display: table-cell;
+    float: left;
+    padding: 20px;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .primary {
     float: left;
-    width: 75%;
-    height: 100%;
+    width: 70%;
 }
 
 .secondary {
-    float: right;
-    width: 25%;
-    height: 100%;
+    float: left;
+    width: 30%;
+}
+
+.footer {
+    display: table;
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    color: #333;
+    background-color: #f2f2f2;
+}
+.footer_item {
+    padding: 20px;
+    display: table-cell;
+    width: 30%;
 }
 
 .item {
     padding: 30px 50px;
     box-sizing: border-box;
-    border: 5px solid white;
-    border-radius: 20px;
-    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+.item p, ul {
+    padding: 30px 100px;
 }
 .item img {
     max-width: 100%;
 }
 .item iframe{
+    width: 100%;
+    min-height: 300px;
+    border: 0;
     max-width: 100%;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+@media only screen and (max-width: 1440px) {
+    .primary { 
+        display: block;
+        float: left;
+        width: 60%;
+    }
+    .secondary {
+        display: block;
+        float: right;
+        width: 40%;
+    }
 }
-.sticky + .primary {
-    padding-top: 80px;
+
+@media only screen and (max-width: 1152px) {
+    .primary, .secondary { 
+        display: block;
+        float: left;
+        width: 50%;
+    } 
 }
-.sticky + .secondary {
-    padding-top: 80px;
+
+@media only screen and (max-width: 960px) {
+    .primary, .secondary { 
+        display: block;
+        width: 100%;
+    }
 }

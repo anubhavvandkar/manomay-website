@@ -1,16 +1,3 @@
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
 function activeListener(event, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("primary");
@@ -24,5 +11,11 @@ function activeListener(event, tabName) {
   document.getElementById(tabName).style.display = "block";
   event.currentTarget.className += " active";
 
+  if(tabName == "Contact"){
+    document.getElementById("footer").style.display = "none";
+  }
+  else{
+    document.getElementById("footer").style.display = "table";
+  }
   scrollTo(0,0);
 }
