@@ -40,28 +40,27 @@ body {
     background-color: #18742c;
     color: white;
 }
-.header {
-    display: table;
-    text-align: left;
-    background-color: white;
-    font-size: 26px;
-    overflow-x: hidden;
-    height: 8%;
+#navbar .icon {
+    display: none;
 }
-.header img {
-    display: table-cell;
-    padding: 10px;
-    width: 10%;
+
+.header {
+    text-align: left;
+    font-size: 26px;
     height: 10%;
 }
-
-.header_item {
-    display: table-cell;
-    float: left;
-    padding: 20px;
+.header img {
+    max-width: 10%;
+}
+.header_title{
+    height: inherit;
+    display: inline-block;
 }
 
-.clearfix:after {
+.clearfix {
+    margin: 0;
+}
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
@@ -78,8 +77,8 @@ body {
 }
 
 .footer {
-    display: table;
     width: 100%;
+    display: table;
     font-size: 18px;
     box-sizing: border-box;
     border-radius: 30px;
@@ -87,12 +86,13 @@ body {
     background-color: #f2f2f2;
 }
 .footer_item {
-    padding: 20px;
     display: table-cell;
-    width: 30%;
+    padding-top: 20px;
+    width: 33.3%;
 }
 
 .item {
+    display: block;
     padding: 30px 50px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -105,12 +105,13 @@ body {
 }
 .item iframe{
     width: 100%;
-    min-height: 300px;
+    height: 75%;
     border: 0;
+    min-height: 300px;
     max-width: 100%;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1600px) {
     .primary { 
         display: block;
         float: left;
@@ -118,22 +119,56 @@ body {
     }
     .secondary {
         display: block;
-        float: right;
+        float: left;
         width: 40%;
     }
-}
-
-@media only screen and (max-width: 1152px) {
-    .primary, .secondary { 
+    .footer_item {
         display: block;
-        float: left;
-        width: 50%;
-    } 
+        width: 100%;
+    }
 }
-
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1360px) {
     .primary, .secondary { 
         display: block;
         width: 100%;
+    }
+    .footer_item {
+        display: block;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #navbar a:not(.active) {
+        display: none;
+    }
+    #navbar a.icon {
+      float: right;
+      display: block;
+    }
+    .item {
+        padding: 20px;
+    }
+    .item p, ul {
+        padding: 20px;
+    }
+    .footer_item {
+        display: block;
+        width: 100%;
+    }
+  }
+@media screen and (max-width: 800px) {
+    #navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
 }

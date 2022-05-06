@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -8,22 +9,38 @@
     </head>
 
     <body>
-        <div class="clearfix">
+        
+        <header class="clearfix" >
             <div class="header">
-                <div class="header_item">
-                    <!-- <img src="..\images\logo_manomay.jpg"> -->
-                    <img src="images/logo_manomay.jpg">
+                <div class="header_logo">
+                    <img src="..\images\logo_manomay.jpg">
+                    <!-- <img src="images/logo_manomay.png"> -->
                 </div>
-                <div class="header_item">
+                <div class="header_title">
                     <h1>Manomay Hearing Aid Center</h1>
                     <p>A unit of New Sree Industries</p>
                 </div>
-                <div class="header_item">
-                    <!-- <img src="..\images\logo_signia.jpg"> -->
-                    <img src="images/logo_signia.png">
+                <div class="header_logo">
+                    <img src="..\images\logo_signia.jpg">
+                    <!-- <img src="images/logo_signia.png"> -->
                 </div>
             </div>
-        </div>  
+        </header>
+        
+        <header class="clearfix" style="padding: 15px;">
+            <div class="header">
+                <div style="float: left;">
+                    <img src="..\images\logo_manomay.jpg">
+                    <!-- <img src="images/logo_manomay.png"> -->
+                    <div class="header_title">
+                        <h1>Manomay Hearing Aid Center</h1>
+                        <p>A unit of New Sree Industries</p>
+                    </div>
+                </div>
+                <img src="..\images\logo_signia.png" style="float: right;">
+                <!-- <img src="images/logo_signia.png" style="float: right;"> -->
+            </div>
+        </header>  
         
         <div id="navbar" class="navbar">
             <a class="tablinks active" href="javascript:void(0)" onclick="activeListener(event, 'Home')">Home</a>
@@ -31,6 +48,7 @@
             <a class="tablinks" href="javascript:void(0)" onclick="activeListener(event, 'Products')">Products</a>
             <a class="tablinks" href="javascript:void(0)" onclick="activeListener(event, 'Services')">Services</a>
             <a class="tablinks" href="javascript:void(0)" onclick="activeListener(event, 'Contact')">Contact Us</a>
+            <a class="icon" href="javascript:void(0);"><i onclick="responsive_navbar(this)" class="fa fa-bars"></i></a>
         </div>
 
         <div class="clearfix" style="padding: 15px;">
@@ -135,51 +153,30 @@
                 <img src="..\images\qr_code.png">
             </div>
             -->
+        </div>
 
-            <hr id="footer_divider" width="75%">
+        <hr id="footer_divider" width="75%">
 
+        <div class="clearfix" style="padding: 15px;">
             <div id="footer" class="footer">
-                <div class="footer_item" style="text-align: right;">
+                <div class="footer_item">
                     <h2>Our Socials</h2>
                     <p><i class="fa fa-instagram" style="font-size: 20px;"></i> &emsp; <a href="https://www.instagram.com/manomaysocials">manomaysocials</a><br>
                         <i class="fa fa-facebook" style="font-size: 20px;"></i> &emsp; <a href="https://www.facebook.com/profile.php?id=100078828554516">Manomay Hearing</a></p>
                 </div>
-                <div class="footer_item" style="text-align: center;">
+                <div class="footer_item">
                     <h2>Contact Us</h2>
-                    <p><span class="material-icons">email</span> &ensp; <b>Email:</b> &ensp; <a href="mailto:manomayhearingaid@gmail.com">manomayhearingaid@gmail.com</a><br>
-                        <span class="material-icons">phone</span> &ensp; <b>Phone:</b> &ensp; 080-4992-3851, +91-99807-74678</p>
+                    <p><span class="material-icons" style="font-size: 20px;">email</span> &ensp; <b>Email:</b> &ensp; <a href="mailto:manomayhearingaid@gmail.com">manomayhearingaid@gmail.com</a><br>
+                        <span class="material-icons" style="font-size: 20px;">phone</span> &ensp; <b>Phone:</b> &ensp; 080-4992-3851, +91-99807-74678</p>
                 </div>
-                <div class="footer_item" style="text-align: left;">
+                <div class="footer_item">
                     <h2>Our Address</h2>
                     <p>#95, 11th Cross Rd, 4th E-Block,<br> Vyalikaval, Kodandarampura, Malleswaram,<br> Bengaluru, Karnataka,<br>India, 560003</p>
                 </div>
             </div>
         </div>
-
+        
         <script src="scripts.js"></script>
 
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-              apiKey: "AIzaSyCqDV4tmv9Ma08Ga9WFflMqF2ccS8efePc",
-              authDomain: "manomay-74eb0.firebaseapp.com",
-              projectId: "manomay-74eb0",
-              storageBucket: "manomay-74eb0.appspot.com",
-              messagingSenderId: "523447708765",
-              appId: "1:523447708765:web:9cf02cddc71ffc1b32b1b4",
-              measurementId: "G-DTYBH18M1G"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-          </script>
     </body>
 </html>
